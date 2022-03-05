@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:stay_focused/widget/permisionScreen/header_text.dart';
 import 'package:stay_focused/widget/permisionScreen/permision_button.dart';
 import 'package:stay_focused/widget/permisionScreen/title_text.dart';
+import 'package:dots_indicator/dots_indicator.dart';
 
 
 class FirstPermisionScreen extends StatefulWidget {
@@ -111,6 +112,16 @@ class _LoginPageState extends State<FirstPermisionScreen> {
                     "Accept & opt-out of data collection",
                     style: TextStyle(fontSize: 16,color: Colors.blue,fontWeight: FontWeight.w600),
                   ),
+                  SizedBox(height: 12),
+                  DotsIndicator(
+                    dotsCount: 3,
+                    position: 0,
+                    decorator: DotsDecorator(
+                      color: Colors.grey, // Inactive color
+                    activeColor: Colors.green,
+                    ),
+                     )
+
                 ],
               ),
             ),

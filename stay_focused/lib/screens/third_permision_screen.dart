@@ -1,3 +1,4 @@
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:stay_focused/widget/permisionScreen/circle_text.dart';
 import 'package:stay_focused/widget/permisionScreen/header_text.dart';
@@ -91,7 +92,15 @@ class _LoginPageState extends State<ThirdPermisionScreen> {
                   children: [
                     SecondPermisionButton(),
                     SizedBox(
-                      height: 35,
+                      height: 12,
+                    ),
+                    DotsIndicator(
+                      dotsCount: 3,
+                      position: 2,
+                      decorator: DotsDecorator(
+                        color: Colors.grey, // Inactive color
+                        activeColor: Colors.green,
+                      ),
                     )
                   ],
                 ),
