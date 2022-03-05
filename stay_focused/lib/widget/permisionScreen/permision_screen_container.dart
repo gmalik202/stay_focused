@@ -43,7 +43,12 @@ class PermisionScreenContainer extends StatelessWidget {
   }
 }
 
-class PermisionContainer extends StatelessWidget {
+class PermisionContainer extends StatefulWidget {
+  // const PermisionContainer({Key? key}) : super(key: key);
+  @override
+  _PermisionContainerState createState() => _PermisionContainerState();
+}
+class _PermisionContainerState extends State<PermisionContainer> {
   bool isSwitched = true;
   @override
   Widget build(BuildContext context) {
@@ -64,11 +69,11 @@ class PermisionContainer extends StatelessWidget {
               child: Switch(
                 value: isSwitched,
                 onChanged: (value) {
-                  // setState(() {
-                  //   isSwitched = value;
-                  //   print(isSwitched);
-                  // }
-                  // );
+                  setState(() {
+                    isSwitched = value;
+                    print(isSwitched);
+                  }
+                  );
                 },
                 activeTrackColor: Colors.lightGreenAccent,
                 activeColor: Colors.lightGreen,
